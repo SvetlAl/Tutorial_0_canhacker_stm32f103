@@ -1,0 +1,34 @@
+/************************************************************************************
+/*			CanHacker interface
+/*
+/*
+/*
+/* How this works?
+/* The interface is simultaneously polling the host:
+/* 1 via USART interrupt USART1_IRQHandler(void) for CanHacker commands.
+/* 2 via CAN1 interrupt USB_LP_CAN1_RX0_IRQHandler to monitor CAN network traffic.
+/* 
+/* Can traffic is stored in the loop buffer and processed in tha main loop (while(1))
+/*
+/* CanHacker messages are processed with the functions in lawicel.c
+/*
+/* That's it! Two main working functions for CAN are 
+/* Can1_Transmit_StdMessage   and
+/* Can1_Recieve_StdMessage
+/*
+/*
+/* Alex Svetlichnyy 2019
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/*
+/************************************************************************************
+
